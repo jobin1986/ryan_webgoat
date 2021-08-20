@@ -17,11 +17,12 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
-          command: mvn -B package -DskipTests com.sonatype.clm:clm-maven-plugin:evaluate -Dclm.additionalScopes=test,provided,system -Dclm.applicationId=Webgoat_Circle -Dclm.serverUrl=http://localhost:8070 -Dclm.username=admin -Dclm.password=admin1234
+          command: mvn -B package -DskipTests 
+          
       # Then run your tests!
       - run:
-          name: Test
-          command: mvn test
+          name: Scan
+          command: java -jar /Users/josephbernie/Documents/Demo_systems/IQ-CLI/nexus-iq-cli-1.121.0-01.jar -i Webgoat_Circle -s http://127.0.0.1:8070 -a admin:admin1234 
 
 workflows:
   # Below is the definition of your workflow.
