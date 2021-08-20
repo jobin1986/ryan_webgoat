@@ -26,7 +26,7 @@ jobs:
       # Then run your scan
       - run:
           name: Scan
-          command: java -jar /tmp/nexus-iq-cli-latest.jar -i Webgoat_Circle -s https://c3085f25b94b.ngrok.io -a admin:admin1234 -t . 
+          command: java -jar /tmp/nexus-iq-cli-latest.jar -i Webgoat_Circle -s https://c3085f25b94b.ngrok.io -a admin:admin1234 -t build .
 
 workflows:
   # Below is the definition of your workflow.
