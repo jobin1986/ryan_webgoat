@@ -22,7 +22,7 @@ jobs:
       # Then run your tests!
       - run:
           name: Scan
-          command: java -jar /Users/josephbernie/Documents/Demo_systems/IQ-CLI/nexus-iq-cli-1.121.0-01.jar -i Webgoat_Circle -s http://127.0.0.1:8070 -a admin:admin1234 
+          command: java -jar /Users/josephbernie/Documents/Demo_systems/IQ-CLI/nexus-iq-cli-1.121.0-01.jar -i Webgoat_Circle -s https://c3085f25b94b.ngrok.io -a admin:admin1234 
 
 workflows:
   # Below is the definition of your workflow.
